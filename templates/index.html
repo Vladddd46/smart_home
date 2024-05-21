@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to JSON</title>
+</head>
+<body>
+    <form id="myForm" action="/control" method="post">
+        <label for="jsonInput">JSON Input:</label>
+        <textarea id="jsonInput" name="jsonInput" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const jsonInput = document.getElementById('jsonInput').value;
+            
+            try {
+                JSON.parse(jsonInput);
+            } catch (e) {
+                console.error('Invalid JSON input');
+                alert('Invalid JSON input');
+                return;
+            }
+            
+            this.submit(); // Submit the form traditionally after validation
+        });
+    </script>
+</body>
+</html>
