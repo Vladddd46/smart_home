@@ -1,1 +1,2 @@
-{"domain": "GENERAL", "function": "REGISTER_DEVICE", "params": {"mac_address": "0", "name": "my_first_rosette"}}
+{"domain": "GENERAL", "function": "REGISTER_DEVICE", "params": {"ip": "127.0.0.1", "port": 5005, "name": "device_1"}}
+{"domain": "GENERAL", "function": "TURN_ON_OFF", "params": {"ip": "127.0.0.1", "port": 5005, "action": "ON"}}

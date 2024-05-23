@@ -6,6 +6,13 @@
     <title>Form to JSON</title>
 </head>
 <body>
+    <h1>Registered_devices:</h1>
+    <pre>
+        {% for device in data %}
+            {{ device }}
+        {% endfor %}
+    </pre>
+
     <form id="myForm" action="/control" method="post">
         <label for="jsonInput">JSON Input:</label>
         <textarea id="jsonInput" name="jsonInput" required></textarea>
